@@ -1,0 +1,23 @@
+defmodule Rocketpay.NumberTest do
+  use ExUnit.Case
+
+  alias Rocketpay.Numbers
+
+  describe "sum_from_file/1" do
+    test "Quando existir um arquivo retorne a soma" do
+      response = Numbers.sum_from_file("numbers")
+
+      expected_response = {:ok, %{result: 37}}
+
+      assert response == expected_response
+    end
+
+    test "Quando NAO existir um arquivo retorne um erro" do
+      response = Numbers.sum_from_file("banana")
+
+      expected_response = {:error, %{message: "Invalid file"}}
+
+      assert response == expected_response
+    end
+  end
+end
