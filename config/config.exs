@@ -26,6 +26,11 @@ config :rocketpay, :basic_auth,
   username: "banana",
   password: "nanica123"
 
+config :cors_plug,
+  origin: ["*"],
+  max_age: 86_400,
+  methods: ["*"]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
