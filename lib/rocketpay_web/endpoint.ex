@@ -48,6 +48,6 @@ defmodule RocketpayWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug Corsica, origins: "*"
+  plug CORSPlug
   plug RocketpayWeb.Router
 end
