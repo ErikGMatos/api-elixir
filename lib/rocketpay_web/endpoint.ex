@@ -49,4 +49,5 @@ defmodule RocketpayWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug RocketpayWeb.Router
+  plug CORSPlug
 end

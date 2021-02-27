@@ -11,6 +11,11 @@ defmodule RocketpayWeb.Router do
     plug :basic_auth, Application.compile_env(:rocketpay, :basic_auth)
   end
 
+  pipeline :api do
+    plug CORSPlug, origin: "*"
+    plug :accepts, ["json"]
+  end
+
   scope "/api", RocketpayWeb do
     pipe_through :api
 
