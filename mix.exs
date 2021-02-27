@@ -54,7 +54,7 @@ defmodule Rocketpay.MixProject do
       {:bcrypt_elixir, "~> 2.0"},
       {:decimal, "~> 2.0"},
       {:excoveralls, "~> 0.10", only: :test},
-      {:cors_plug, "~> 2.0"}
+      {:corsica, "~> 1.0"}
     ]
   end
 
