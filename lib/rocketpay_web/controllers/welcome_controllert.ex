@@ -9,10 +9,10 @@ defmodule RocketpayWeb.WelcomeController do
     |> handle_response(conn)
   end
 
-  defp handle_response({:ok, %{result: result}}, conn) do
+  defp handle_response({:ok, %{result: _result}}, conn) do
     conn
     |> put_status(:ok)
-    |> json(%{message: "Welcome to the rocketpay API. here is your number  #{result}"})
+    |> json(%{message: "Bem vindo a API Elixir + Phoenix"})
   end
 
   defp handle_response({:error, reason}, conn) do
