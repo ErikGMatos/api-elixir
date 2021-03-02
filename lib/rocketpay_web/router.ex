@@ -17,6 +17,7 @@ defmodule RocketpayWeb.Router do
     get "/:filename", WelcomeController, :index
 
     post "/users", UsersController, :create
+    post "/send", EmailController, :send
   end
 
   scope "/api", RocketpayWeb do

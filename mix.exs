@@ -27,7 +27,7 @@ defmodule Rocketpay.MixProject do
   def application do
     [
       mod: {Rocketpay.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :swoosh, :gen_smtp]
     ]
   end
 
@@ -54,7 +54,10 @@ defmodule Rocketpay.MixProject do
       {:bcrypt_elixir, "~> 2.0"},
       {:decimal, "~> 2.0"},
       {:excoveralls, "~> 0.10", only: :test},
-      {:cors_plug, "~> 2.0"}
+      {:cors_plug, "~> 2.0"},
+      {:swoosh, "~> 1.3"},
+      {:gen_smtp, "~> 0.13"},
+      {:hackney, "~> 1.9"}
     ]
   end
 

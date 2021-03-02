@@ -26,6 +26,18 @@ config :rocketpay, :basic_auth,
   username: "banana",
   password: "nanica123"
 
+config :rocketpay, Rocketpay.Mailer,
+  adapter: Swoosh.Adapters.SMTP,
+  relay: "smtp.gmail.com",
+  username: "erikmatos40@gmail.com",
+  password: "Eaton100288",
+  ssl: false,
+  tls: :always,
+  auth: :always,
+  port: 587,
+  retries: 2,
+  no_mx_lookups: false
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
