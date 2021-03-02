@@ -30,6 +30,18 @@ config :rocketpay, RocketpayWeb.Endpoint,
   ],
   secret_key_base: secret_key_base
 
+config :rocketpay, Rocketpay.Mailer,
+  adapter: Swoosh.Adapters.SMTP,
+  relay: "smtp.gmail.com",
+  username: System.get_env("EMAIL_USER"),
+  password: System.get_env("EMAIL_PASSWORD"),
+  ssl: false,
+  tls: :always,
+  auth: :always,
+  port: 587,
+  retries: 2,
+  no_mx_lookups: false
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix
