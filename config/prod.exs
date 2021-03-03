@@ -10,23 +10,23 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :rocketpay, RocketpayWeb.Endpoint,
-  url: [host: "https://soulful-eager-roach.gigalixirapp.com", port: 80],
+  url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
 config :logger, level: :info
 
-config :rocketpay, Rocketpay.Mailer,
-  adapter: Swoosh.Adapters.SMTP,
-  relay: "smtp.gmail.com",
-  username: System.get_env("EMAIL_USER"),
-  password: System.get_env("EMAIL_PASSWORD"),
-  ssl: false,
-  tls: :always,
-  auth: :always,
-  port: 587,
-  retries: 2,
-  no_mx_lookups: false
+# config :rocketpay, Rocketpay.Mailer,
+#   adapter: Swoosh.Adapters.SMTP,
+#   relay: "smtp.gmail.com",
+#   username: System.get_env("EMAIL_USER"),
+#   password: System.get_env("EMAIL_PASSWORD"),
+#   ssl: false,
+#   tls: :always,
+#   auth: :always,
+#   port: 587,
+#   retries: 2,
+#   no_mx_lookups: false
 
 # ## SSL Support
 #
