@@ -16,18 +16,6 @@ config :rocketpay, RocketpayWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
-# config :rocketpay, Rocketpay.Mailer,
-#   adapter: Swoosh.Adapters.SMTP,
-#   relay: "smtp.gmail.com",
-#   username: System.get_env("EMAIL_USER"),
-#   password: System.get_env("EMAIL_PASSWORD"),
-#   ssl: false,
-#   tls: :always,
-#   auth: :always,
-#   port: 587,
-#   retries: 2,
-#   no_mx_lookups: false
-
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
