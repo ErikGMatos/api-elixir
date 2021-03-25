@@ -9,8 +9,8 @@ defmodule Rocketpay.UserEmail do
         "allow_whatsap_contact" => allow_whatsap_contact
       }) do
     new()
-    |> to({name, email})
-    |> from({"Erik Matos", "erikmatos40@gmail.com"})
+    |> to({"Zetta App", "faleconosco@zetta.app.br"})
+    |> from({"Zetta App", "faleconosco@zetta.app.br"})
     |> subject("Contato via landpage")
     |> html_body(
       "
