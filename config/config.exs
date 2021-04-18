@@ -3,6 +3,7 @@
 #
 # This configuration file is loaded before any dependency and
 # is restricted to this project.
+#
 
 # General application configuration
 use Mix.Config
